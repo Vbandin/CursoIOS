@@ -8,7 +8,16 @@
 
 import Foundation
 
-class Student: CustomStringConvertible {
+class Student: Hashable, CustomStringConvertible {
+    
+    static func == (lhs: Student, rhs: Student) -> Bool {
+        return ObjectIdentifier(lhs) == ObjectIdentifier(rhs)
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        return hasher.combine(ObjectIdentifier(self))
+    }
+    
     // Properties with optional '?' value can be nil
     var name: String?
     var email: String?

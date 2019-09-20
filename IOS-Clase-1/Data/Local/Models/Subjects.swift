@@ -8,7 +8,16 @@
 
 import Foundation
 
-class Subjects {
+class Subjects: Hashable, CustomStringConvertible {
+    
+    static func == (lhs: Subjects, rhs: Subjects) -> Bool {
+        return ObjectIdentifier(lhs) == ObjectIdentifier(rhs)
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        return hasher.combine(ObjectIdentifier(self))
+    }
+
     var name: String?
     var teachers: [Teacher] = []
     var students: [Student] = []
@@ -20,6 +29,9 @@ class Subjects {
         return students.count
     }
     
+    var description: String {
+        return "Subject data: \(String(describing: name)))"
+    }
     convenience init(name: String, teachers: [Teacher]
         = [], students: [Student] = []) {
         self.init()
