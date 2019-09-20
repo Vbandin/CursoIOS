@@ -54,14 +54,70 @@
 		D988CD3C23351C5E00356821 /* IOS-Clase-1 */ = {
 			isa = PBXGroup;
 			children = (
-				D988CD3D23351C5E00356821 /* AppDelegate.swift */,
-				D988CD3F23351C5E00356821 /* ViewController.swift */,
-				D988CD4123351C5E00356821 /* Main.storyboard */,
-				D988CD4423351C5F00356821 /* Assets.xcassets */,
-				D988CD4623351C5F00356821 /* LaunchScreen.storyboard */,
-				D988CD4923351C5F00356821 /* Info.plist */,
+				D988CD4F23352B2300356821 /* App */,
+				D988CD5023352B7F00356821 /* Data */,
+				D988CD5123352B9200356821 /* Resources */,
+				D988CD5223352BDB00356821 /* UI */,
 			);
 			path = "IOS-Clase-1";
+			sourceTree = "<group>";
+		};
+		D988CD4F23352B2300356821 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D988CD3D23351C5E00356821 /* AppDelegate.swift */,
+				D988CD4923351C5F00356821 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D988CD5023352B7F00356821 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D988CD5123352B9200356821 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D988CD4423351C5F00356821 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D988CD5223352BDB00356821 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D988CD5423352C0500356821 /* Controllers */,
+				D988CD5323352BFB00356821 /* Views */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D988CD5323352BFB00356821 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D988CD5523352C6300356821 /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D988CD5423352C0500356821 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D988CD3F23351C5E00356821 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D988CD5523352C6300356821 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D988CD4123351C5E00356821 /* Main.storyboard */,
+				D988CD4623351C5F00356821 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
