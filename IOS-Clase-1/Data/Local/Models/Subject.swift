@@ -8,9 +8,9 @@
 
 import Foundation
 
-class Subjects: Hashable, CustomStringConvertible {
+class Subject: Hashable, CustomStringConvertible {
     
-    static func == (lhs: Subjects, rhs: Subjects) -> Bool {
+    static func == (lhs: Subject, rhs: Subject) -> Bool {
         return ObjectIdentifier(lhs) == ObjectIdentifier(rhs)
     }
     
