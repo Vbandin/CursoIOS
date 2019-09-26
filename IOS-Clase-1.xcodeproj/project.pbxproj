@@ -16,6 +16,8 @@
 		D99BAE11233547290085800F /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99BAE10233547290085800F /* Teacher.swift */; };
 		D99BAE13233547340085800F /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99BAE12233547340085800F /* Subject.swift */; };
 		D9CBA1312339153400C4F749 /* DefaultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CBA1302339153400C4F749 /* DefaultData.swift */; };
+		D9F90B03233BB15A00F29719 /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F90B02233BB15A00F29719 /* StudentViewController.swift */; };
+		D9F90B05233BD5EA00F29719 /* StudentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F90B04233BD5E900F29719 /* StudentViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		D99BAE10233547290085800F /* Teacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
 		D99BAE12233547340085800F /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		D9CBA1302339153400C4F749 /* DefaultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultData.swift; sourceTree = "<group>"; };
+		D9F90B02233BB15A00F29719 /* StudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
+		D9F90B04233BD5E900F29719 /* StudentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				D988CD3F23351C5E00356821 /* MainViewController.swift */,
+				D9F90B02233BB15A00F29719 /* StudentViewController.swift */,
+				D9F90B04233BD5E900F29719 /* StudentViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -221,9 +227,11 @@
 			files = (
 				D99BAE11233547290085800F /* Teacher.swift in Sources */,
 				D988CD4023351C5E00356821 /* MainViewController.swift in Sources */,
+				D9F90B05233BD5EA00F29719 /* StudentViewCell.swift in Sources */,
 				D99BAE0F2335353A0085800F /* Student.swift in Sources */,
 				D9CBA1312339153400C4F749 /* DefaultData.swift in Sources */,
 				D988CD3E23351C5E00356821 /* AppDelegate.swift in Sources */,
+				D9F90B03233BB15A00F29719 /* StudentViewController.swift in Sources */,
 				D99BAE13233547340085800F /* Subject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

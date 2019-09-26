@@ -32,13 +32,17 @@ class Subject: Hashable, CustomStringConvertible {
     var description: String {
         return "Subject data: \(String(describing: name)))"
     }
+    
+    var logo: String?
+    
     convenience init(name: String, teachers: [Teacher]
-        = [], students: [Student] = []) {
+        = [], students: [Student] = [], logo: String? = nil) {
         self.init()
         
         self.name = name
         self.teachers = teachers
         self.students = students
+        self.logo = logo
     }
 
 }

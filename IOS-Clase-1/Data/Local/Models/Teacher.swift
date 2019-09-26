@@ -40,17 +40,20 @@ class Teacher: Hashable, CustomStringConvertible {
     var name: String?
     var email: String?
     var type: TeacherType?
+    var avatar: String?
+
     // Use description var of CustomStringConvertible
     // to print this class with custom String format
     var description: String {
         return "Teacher data: \(String(describing: name)) \(String(describing: email)) \(String(describing: type)))"
     }
-    convenience init(name: String, email: String? = nil, type: TeacherType? = nil) {
+    convenience init(name: String, email: String? = nil, type: TeacherType? = nil, avatar: String? = nil) {
         self.init()
         
         self.name = name
         self.email = email
         self.type = type
+        self.avatar = avatar
     }
 
 }

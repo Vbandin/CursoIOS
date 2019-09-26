@@ -22,6 +22,7 @@ class Student: Hashable, CustomStringConvertible {
     var name: String?
     var email: String?
     var birthdate: Date?
+    var avatar: String?
     // Use description var of CustomStringConvertible
     // to print this class with custom String format
     var description: String {
@@ -30,11 +31,12 @@ class Student: Hashable, CustomStringConvertible {
 
     // Custom init (Constructor) class with default values
     convenience init(name:String, email: String? = nil,
-                     birthdate: Date? = nil) {
+                     birthdate: Date? = nil, avatar: String? = nil) {
         self.init()
         // always init all propertiess
         self.name = name
         self.email = email
         self.birthdate = birthdate
+        self.avatar = avatar
     }
 }
