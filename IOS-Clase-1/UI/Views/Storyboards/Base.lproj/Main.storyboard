@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -122,15 +123,203 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ptD-Wk-yaW"/>
+                        <segue destination="hH7-CC-eb8" kind="relationship" relationship="viewControllers" id="0ra-Of-oGF"/>
+                        <segue destination="2VJ-Jb-x5x" kind="relationship" relationship="viewControllers" id="nqB-7A-QIA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhu-Y0-J19" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="138.61607142857142"/>
         </scene>
+        <!--Teachers-->
+        <scene sceneID="e4Q-Fb-bUk">
+            <objects>
+                <viewController id="hH7-CC-eb8" customClass="TeachersViewController" customModule="IOS_Clase_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GWL-4R-wFq" customClass="View">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IA8-Nv-Cmo">
+                                <rect key="frame" x="0.0" y="63" width="414" height="769"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TeacherViewCell" rowHeight="109" id="HW7-Jj-8Vh" customClass="TeacherViewCell" customModule="IOS_Clase_1" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="109"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HW7-Jj-8Vh" id="NtP-13-Nc7">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="109"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aPJ-u9-PPd">
+                                                    <rect key="frame" x="10" y="10" width="394" height="89"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="eJf-fQ-6Sa">
+                                                            <rect key="frame" x="8" y="8" width="378" height="73"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_teacher_1" translatesAutoresizingMaskIntoConstraints="NO" id="PVM-Mc-DC2">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="73"/>
+                                                                    <accessibility key="accessibilityConfiguration" identifier="teacherImg"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="73" id="1lJ-B9-tw4"/>
+                                                                        <constraint firstAttribute="width" constant="100" id="346-6e-7R0"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2IR-gn-34v">
+                                                                    <rect key="frame" x="116" y="12" width="262" height="49"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre: " textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4D-ot-mSQ" userLabel="Nombre:">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="262" height="20.5"/>
+                                                                            <accessibility key="accessibilityConfiguration" identifier="teacherLabelName"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eMail:" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXa-Vk-bkf" userLabel="Email">
+                                                                            <rect key="frame" x="0.0" y="28.5" width="262" height="20.5"/>
+                                                                            <accessibility key="accessibilityConfiguration" identifier="teacherLabelEmail"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="262" id="7NO-wa-tYU"/>
+                                                                    </constraints>
+                                                                </stackView>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="378" id="AvW-Ti-w9U"/>
+                                                                <constraint firstAttribute="height" constant="73" id="SpO-rY-xu2"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="teacherView"/>
+                                                    <constraints>
+                                                        <constraint firstItem="eJf-fQ-6Sa" firstAttribute="leading" secondItem="aPJ-u9-PPd" secondAttribute="leading" constant="8" id="5YR-V2-526"/>
+                                                        <constraint firstItem="eJf-fQ-6Sa" firstAttribute="top" secondItem="aPJ-u9-PPd" secondAttribute="top" constant="8" id="KZL-oY-4Ls"/>
+                                                        <constraint firstAttribute="width" constant="394" id="Pg7-84-M36"/>
+                                                        <constraint firstAttribute="height" constant="89" id="Q4I-hX-SUS"/>
+                                                        <constraint firstAttribute="bottom" secondItem="eJf-fQ-6Sa" secondAttribute="bottom" constant="8" id="Zd0-nb-WZs"/>
+                                                        <constraint firstAttribute="trailing" secondItem="eJf-fQ-6Sa" secondAttribute="trailing" constant="8" id="bwx-27-raT"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="aPJ-u9-PPd" firstAttribute="leading" secondItem="NtP-13-Nc7" secondAttribute="leading" constant="10" id="7f0-n8-4pK"/>
+                                                <constraint firstAttribute="bottom" secondItem="aPJ-u9-PPd" secondAttribute="bottom" constant="10" id="Jht-lq-ssM"/>
+                                                <constraint firstItem="aPJ-u9-PPd" firstAttribute="top" secondItem="NtP-13-Nc7" secondAttribute="top" constant="10" id="g0C-Sb-zcT"/>
+                                                <constraint firstAttribute="trailing" secondItem="aPJ-u9-PPd" secondAttribute="trailing" constant="10" id="wQ7-1u-gXb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="TeacherViewCell"/>
+                                        <connections>
+                                            <outlet property="teacherImg" destination="PVM-Mc-DC2" id="F7U-9Q-JLw"/>
+                                            <outlet property="teacherLabelEmail" destination="fXa-Vk-bkf" id="Dxv-AD-atY"/>
+                                            <outlet property="teacherLabelName" destination="a4D-ot-mSQ" id="bkb-Eg-CQ8"/>
+                                            <outlet property="teacherView" destination="aPJ-u9-PPd" id="KDb-Iz-XN4"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Yc1-TF-etu"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Teachers" image="ic_tab_teachers" id="UZs-c1-M6j"/>
+                    <connections>
+                        <outlet property="tableView" destination="IA8-Nv-Cmo" id="iEv-UQ-XdR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lLb-Yf-8dn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1523" y="829"/>
+        </scene>
+        <!--Subjects-->
+        <scene sceneID="1Ga-Ee-Yfz">
+            <objects>
+                <viewController id="2VJ-Jb-x5x" customClass="SubjectViewController" customModule="IOS_Clase_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O2F-NR-6pX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kjB-Vr-0da">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8ib-54-xQa">
+                                    <size key="itemSize" width="129" height="129"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SubjectViewCell" id="str-cF-k1j" customClass="SubjectViewCell" customModule="IOS_Clase_1" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="129" height="129"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bdc-mS-bpd">
+                                            <rect key="frame" x="0.0" y="0.0" width="129" height="129"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Fbs-qA-lkq">
+                                                    <rect key="frame" x="8" y="8" width="113" height="113"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_subject_android" translatesAutoresizingMaskIntoConstraints="NO" id="a9p-YL-BsB">
+                                                            <rect key="frame" x="0.0" y="0.0" width="113" height="95.5"/>
+                                                            <accessibility key="accessibilityConfiguration" identifier="subjectImg"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fc-nN-s4u">
+                                                            <rect key="frame" x="26" y="99.5" width="61.5" height="13.5"/>
+                                                            <accessibility key="accessibilityConfiguration" identifier="subjectLabelName"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Fbs-qA-lkq" firstAttribute="leading" secondItem="bdc-mS-bpd" secondAttribute="leading" constant="8" id="6km-56-4Ex"/>
+                                                <constraint firstItem="Fbs-qA-lkq" firstAttribute="top" secondItem="bdc-mS-bpd" secondAttribute="top" constant="8" id="6sh-1P-HU7"/>
+                                                <constraint firstAttribute="trailing" secondItem="Fbs-qA-lkq" secondAttribute="trailing" constant="8" id="mtQ-jk-cKd"/>
+                                                <constraint firstAttribute="bottom" secondItem="Fbs-qA-lkq" secondAttribute="bottom" constant="8" id="vA2-WA-YO8"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="129" height="129"/>
+                                        <connections>
+                                            <outlet property="subjectImg" destination="a9p-YL-BsB" id="SCt-04-Ggj"/>
+                                            <outlet property="subjectLabelName" destination="6Fc-nN-s4u" id="k8t-k4-CAx"/>
+                                            <outlet property="subjectView" destination="bdc-mS-bpd" id="fPz-bO-5hV"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kjB-Vr-0da" firstAttribute="trailing" secondItem="sS8-HN-rct" secondAttribute="trailing" id="7ac-OL-R61"/>
+                            <constraint firstItem="kjB-Vr-0da" firstAttribute="leading" secondItem="sS8-HN-rct" secondAttribute="leading" id="GRc-dL-zFe"/>
+                            <constraint firstItem="kjB-Vr-0da" firstAttribute="bottom" secondItem="sS8-HN-rct" secondAttribute="bottom" id="XVZ-Go-Pbh"/>
+                            <constraint firstItem="kjB-Vr-0da" firstAttribute="top" secondItem="sS8-HN-rct" secondAttribute="top" id="wqe-cC-CRc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sS8-HN-rct"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Subjects" image="ic_tab_subjects" id="ff4-rz-A7V" customClass="Subjects"/>
+                    <connections>
+                        <outlet property="collectionView" destination="kjB-Vr-0da" id="bu8-vz-onY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M18-sa-Cfm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1553.6231884057972" y="1473.8839285714284"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ic_tab_students" width="30" height="27"/>
+        <image name="ic_tab_subjects" width="24" height="30"/>
+        <image name="ic_tab_teachers" width="20" height="30"/>
         <image name="img_student_1" width="400" height="588"/>
+        <image name="img_subject_android" width="116" height="132"/>
+        <image name="img_teacher_1" width="375" height="569"/>
     </resources>
 </document>

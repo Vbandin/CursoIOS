@@ -1,0 +1,54 @@
+//
+//  SubjectViewController.swift
+//  IOS-Clase-1
+//
+//  Created by Dev2 on 26/09/2019.
+//  Copyright © 2019 Vbandin. All rights reserved.
+//
+
+import UIKit
+
+class SubjectViewController: UIViewController {
+    
+    // Mark: IBOutlets
+    @IBOutlet weak  var collectionView: UICollectionView!
+    
+    // Mark: Lifecycle methods
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configureCollectionView()
+    }
+
+}
+
+extension SubjectViewController: UICollectionViewDataSource,
+UICollectionViewDelegate {
+    
+    // Mark: Configure TableView with default options
+    func configureCollectionView() {
+           collectionView.dataSource = self
+           collectionView.delegate = self
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return defaultSubjects.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell =
+            collectionView.dequeueReusableCell(withReuseIdentifier:
+                "SubjectViewCell", for: indexPath) as? SubjectViewCell else {
+                    return UICollectionViewCell()
+            }
+            
+            if (indexPath.row < defaultSubjects.count) {
+                let subject = defaultSubjects[indexPath.row]
+                cell.configureCell(subject: subject)
+            }
+            
+            return cell
+        }
+    }
+
+
+    
